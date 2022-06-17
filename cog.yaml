@@ -1,0 +1,14 @@
+build:
+  cuda: "11.6"
+  gpu: true
+  system_packages:
+    - "libgl1-mesa-glx"
+    - "libglib2.0-0"
+  python_version: "3.8"
+  python_packages:
+    - "SwissArmyTransformer>=0.2"
+    - "icetk==0.0.3"
+  run:
+    - "git clone https://github.com/Sleepychord/Image-Local-Attention && cd Image-Local-Attention && python setup.py install && cd .."
+predict: "predict.py:Predictor"
+image: "r8.im/nicholascelestin/missingno"
